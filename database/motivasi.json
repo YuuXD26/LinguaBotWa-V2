@@ -1,0 +1,236 @@
+[
+    {
+      "index": 1,
+      "tokoh": "Albert Einstein",
+      "kata": "Kegagalan adalah kesempatan untuk memulai lagi dengan lebih bijaksana"
+    },
+    {
+      "index": 2,
+      "tokoh": "Bill Gates",
+      "kata": "Jangan takut untuk gagal. Rasa takut gagal adalah yang menahan orang untuk mencoba hal-hal baru dan meraih impian mereka"
+    },
+    {
+      "index": 3,
+      "tokoh": "Bruce Lee",
+      "kata": "Jangan takut untuk menunjukkan kelemahanmu. Itu yang membuatmu manusia"
+    },
+    {
+      "index": 4,
+      "tokoh": "Coco Chanel",
+      "kata": "Kesuksesan bukanlah akhir, kegagalan bukanlah akhir. Keberanian untuk melanjutkanlah yang penting"
+    },
+    {
+      "index": 5,
+      "tokoh": "Dalai Lama",
+      "kata": "Kebahagiaan adalah perjalanan, bukan tujuan"
+    },
+    {
+      "index": 6,
+      "tokoh": "Elon Musk",
+      "kata": "Jangan pernah menyerah pada apa yang kamu yakini"
+    },
+    {
+      "index": 7,
+      "tokoh": "Frank Sinatra",
+      "kata": "Jangan pernah takut menjadi diri sendiri"
+    },
+    {
+      "index": 8, "tokoh": "Gandhi",
+      "kata": "Kekuatan terbesar di dunia adalah cinta"
+    },
+    {
+      "index": 9, "tokoh": "Jane Austen",
+      "kata": "Jangan pernah menilai sebuah buku dari sampulnya"
+    },
+    {
+      "index": 10, "tokoh": "Jim Carrey",
+      "kata": "Jangan takut untuk mengikuti impianmu"
+    },
+    {
+      "index": 11, "tokoh": "John F. Kennedy",
+      "kata": "Jangan pernah bertanya apa yang dapat negaramu lakukan untukmu, tanyakan apa yang dapat kamu lakukan untuk negaramu"
+    },
+    {
+      "index": 12, "tokoh": "J.K. Rowling",
+      "kata": "Jangan pernah menyerah pada apa yang kamu inginkan, hanya karena butuh waktu untuk mewujudkannya"
+    },
+    {
+      "index": 13, "tokoh": "Leo Tolstoy",
+      "kata": "Hidup adalah apa yang terjadi ketika kamu sedang sibuk membuat rencana"
+    },
+    {
+      "index": 14, "tokoh": "Maya Angelou",
+      "kata": "Jangan pernah membiarkan siapa pun mengatakan kepadamu bahwa kamu tidak bisa melakukan sesuatu"
+    },
+    {
+      "index": 15, "tokoh": "Mother Teresa",
+      "kata": "Cinta adalah jawabannya"
+    },
+    {
+      "index": 16, "tokoh": "Nelson Mandela",
+      "kata": "Jangan pernah menyerah pada harapan"
+    },
+    {
+      "index": 17, "tokoh": "Oprah Winfrey",
+      "kata": "Jangan pernah takut untuk menjadi berbeda"
+    },
+    {
+      "index": 18, "tokoh": "Plato",
+      "kata": "Hidup adalah apa yang kita pikirkan"
+    },
+    {
+      "index": 19, "tokoh": "Steve Jobs",
+      "kata": "Jangan takut untuk mengambil risiko"
+    },
+    {
+      "index": 20, "tokoh": "Walt Disney",
+      "kata": "Jika kamu bisa memimpikannya, maka kamu bisa mewujudkannya"
+    },
+    {
+      "index": 21, "tokoh": "Winston Churchill",
+      "kata": "Jangan pernah menyerah, bahkan ketika semuanya tampak mustahil"
+    },
+    {
+      "index": 22, "tokoh": "Yoda",
+      "kata": "Jangan mencoba. Lakukan atau jangan lakukan. Tidak ada coba-coba"
+    },
+    {
+      "index": 23, "tokoh": "Zig Ziglar",
+      "kata": "Percayalah pada dirimu sendiri dan semua hal akan menjadi mungkin"
+    },
+    {
+      "index": 24, "tokoh": "Albert Einstein",
+      "kata": "Imaginasi lebih penting daripada pengetahuan"
+    },
+    {
+        "index": 25,
+        "tokoh": "Bill Gates",
+        "kata": "Jika kamu tidak bisa membuatnya baik, setidaknya buatlah menarik"
+      },
+      {
+        "index": 26,
+        "tokoh": "Bruce Lee",
+        "kata": "Saya tidak takut pada orang yang berlatih 10.000 tendangan sekali, tetapi saya takut pada orang yang berlatih satu tendangan 10.000 kali"
+      },
+      {
+        "index": 27,
+        "tokoh": "Coco Chanel",
+        "kata": "Wanita yang tidak memakai parfum tidak memiliki masa depan"
+      },
+      {
+        "index": 28,
+        "tokoh": "Dalai Lama",
+        "kata": "Kedamaian dimulai di dalam diri sendiri"
+      },
+      {
+        "index": 29,
+        "tokoh": "Elon Musk",
+        "kata": "Jika kamu tidak malu karena versi pertama dari produkmu, maka kamu telah meluncurkannya terlambat"
+      },
+      {
+        "index": 30,
+        "tokoh": "Frank Sinatra",
+        "kata": "The best revenge is massive success"
+      },
+      {
+        "index": 31,
+        "tokoh": "Gandhi",
+        "kata": "Jadilah perubahan yang ingin kamu lihat di dunia"
+      },
+      {
+        "index": 32,
+        "tokoh": "Jane Austen",
+        "kata": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife"
+      },
+      {
+        "index": 33,
+        "tokoh": "Jim Carrey",
+        "kata": "Saya tidak gagal. Saya baru saja menemukan 10.000 cara yang tidak berhasil"
+      },
+      {
+        "index": 34,
+        "tokoh": "John F. Kennedy",
+        "kata": "Kita tidak memilih waktu di mana kita hidup, tetapi kita dapat memilih apa yang akan kita lakukan dengan waktu itu"
+      },
+      {
+        "index": 35,
+        "tokoh": "J.K. Rowling",
+        "kata": "Tidak ada yang baik atau buruk, tetapi pemikiran membuatnya demikian"
+      },
+      {
+        "index": 36,
+        "tokoh": "Leo Tolstoy",
+        "kata": "Semua keluarga bahagia sama, tetapi setiap keluarga bahagia tidak bahagia dengan caranya sendiri"
+      },
+      {
+        "index": 37,
+        "tokoh": "Maya Angelou",
+        "kata": "Caged bird sings with a fearful trill of things unknown but longed for still and his tune is heard on the distant hill for the caged bird sings of freedom"
+      },
+      {
+        "index": 38,
+        "tokoh": "Mother Teresa",
+        "kata": "Jika kamu tidak bisa memberi makan seratus orang, maka beri makanlah satu orang saja"
+      },
+      {
+        "index": 39,
+        "tokoh": "Nelson Mandela",
+        "kata": "Pendidikan adalah senjata paling ampuh yang dapat kamu gunakan untuk mengubah dunia"
+      },
+      {
+        "index": 40,
+        "tokoh": "Oprah Winfrey",
+        "kata": "Kamu bertanggung jawab atas hidupmu. Jangan menyerahkan kekuasaanmu kepada orang lain"
+      },
+      {
+        "index": 41,
+        "tokoh": "Plato",
+        "kata": "Manusia adalah makhluk sosial"
+      },
+      {
+        "index": 42,
+        "tokoh": "Steve Jobs",
+        "kata": "Tetaplah lapar, tetaplah bodoh"
+      },
+      {
+        "index": 43,
+        "tokoh": "Walt Disney",
+        "kata": "Semua impian kita bisa menjadi kenyataan jika kita memiliki keberanian untuk mengejarnya"
+      },
+      {
+        "index": 44,
+        "tokoh": "Winston Churchill",
+        "kata": "Jangan pernah menyerah, bahkan ketika semuanya tampak mustahil"
+      },
+      {
+        "index": 45,
+        "tokoh": "Yoda",
+        "kata": "A good teacher is like a candle—it consumes itself"
+      },
+      {
+        "index": 46,
+        "tokoh": "Albert Einstein",
+        "kata": "Jika kamu tidak dapat mengubah situasinya, maka ubahlah sikapmu"
+      },
+      {
+        "index": 47,
+        "tokoh": "Bill Gates",
+        "kata": "Hidup tidak adil - terbiasa dengannya"
+      },
+      {
+        "index": 48,
+        "tokoh": "Bruce Lee",
+        "kata": "Jangan berdoa untuk kehidupan yang mudah, berdoalah untuk menjadi lebih kuat"
+      },
+      {
+        "index": 49,
+        "tokoh": "Coco Chanel",
+        "kata": "Sukses adalah hal yang penting, tetapi tidak lebih penting daripada harga diri"
+      },
+      {
+        "index": 50,
+        "tokoh": "Dalai Lama",
+        "kata": "Jangan biarkan masa lalu menghancurkanmu, jangan biarkan masa depan mengkhawatirkanmu, fokuslah pada saat ini"
+      }
+    ]
+  
