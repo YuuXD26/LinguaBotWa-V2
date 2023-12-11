@@ -35,13 +35,13 @@ const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
 };
 
-const app = express ();
+const app = express();
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log('server started')
 })
 
@@ -202,7 +202,7 @@ async function startHisoka() {
   process.on("rejectionHandled", (promise) => {
     unhandledRejections.delete(promise);
   });
-  process.on("Something went wrong", function (err) {
+  process.on("Something went wrong", function(err) {
     console.log("Caught exception: ", err);
   });
 
@@ -236,12 +236,12 @@ async function startHisoka() {
       v =
         id === "0@s.whatsapp.net"
           ? {
-              id,
-              name: "WhatsApp",
-            }
+            id,
+            name: "WhatsApp",
+          }
           : id === client.decodeJid(client.user.id)
-          ? client.user
-          : store.contacts[id] || {};
+            ? client.user
+            : store.contacts[id] || {};
     return (withoutContact ? "" : v.name) || v.subject || v.verifiedName || PhoneNumber("+" + jid.replace("@s.whatsapp.net", "")).getNumber("international");
   };
 
@@ -300,7 +300,7 @@ async function startHisoka() {
       console.log(color("Bot success conneted to server", "green"));
       console.log(color("Donate for creator Chat Owner", "yellow"));
       console.log(color("Type /menu to see menu"));
-      client.sendMessage(owner + "@s.whatsapp.net", { text: "```「 Broadcast Bot 」\n\nBotName: " + botName + "\nOwner: " + ownerName + "\nStatus: Online\n📆 " + formattedDate + "\n⏰ " + formattedTime+" WIB```"});
+      client.sendMessage(owner + "@s.whatsapp.net", { text: "```「 Broadcast Bot 」\n\nBotName: " + botName + "\nOwner: " + ownerName + "\nStatus: Online\n📆 " + formattedDate + "\n⏰ " + formattedTime + " WIB```" });
     }
     // console.log('Connected...', update)
   });
@@ -330,12 +330,12 @@ async function startHisoka() {
     let buffer = Buffer.isBuffer(path)
       ? path
       : /^data:.*?\/.*?;base64,/i.test(path)
-      ? Buffer.from(path.split`,`[1], "base64")
-      : /^https?:\/\//.test(path)
-      ? await await getBuffer(path)
-      : fs.existsSync(path)
-      ? fs.readFileSync(path)
-      : Buffer.alloc(0);
+        ? Buffer.from(path.split`,`[1], "base64")
+        : /^https?:\/\//.test(path)
+          ? await await getBuffer(path)
+          : fs.existsSync(path)
+            ? fs.readFileSync(path)
+            : Buffer.alloc(0);
     return await client.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted });
   };
 

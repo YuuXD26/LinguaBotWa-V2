@@ -1,0 +1,141 @@
+case 'jkt48': {
+  if (args.length < 1) {
+    reply('Silakan masukkan query untuk mencari gambar JKT48.');
+    return;
+  }
+
+  const query = args.join(' ');
+  const apiKey = 'YuuXD';  // Ganti dengan API key yang benar
+
+  // Membuat permintaan HTTP ke API
+  axios.get(`https://random.stockakunpolos.repl.co/api/jkt482?query1=${query}&query2=jkt48&apikey=${apiKey}`)
+    .then(async (response) => {
+      const data = response.data;
+      if (data.imageUrl) {
+        // Mendownload gambar dari URL
+        const imageResponse = await axios.get(data.imageUrl, { responseType: 'stream' });
+
+        // Mengirim gambar ke pengguna
+        const imageBuffer = await imageResponse.data.pipe(fs.createWriteStream('jkt48.jpg'));
+
+        // Mengirim gambar ke pengguna
+        client.sendImage(from, 'jkt48.jpg', `Hasil pencarian ${query}`);
+
+      } else {
+        reply('Tidak dapat menemukan gambar JKT48 untuk query tersebut.');
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      reply('Terjadi kesalahan saat mencari gambar JKT48.');
+    });
+}
+  break;
+
+  case "img": case "ai-img": case "image": case "images":
+  try {
+    if (setting.keyopenai === "null") return reply("Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys");
+    if (!text) return reply(`Membuat gambar dari AI.\n\nContoh:\n${prefix}${command} Wooden house on snow mountain`);
+
+    const diGroup = from.endsWith('@g.us'); // Periksa apakah pesan dikirim dari grup
+    // Baca file 'ijin.json'
+    const ijinData = JSON.parse(fs.readFileSync('./database/ijin.json'));
+
+    // Periksa apakah nomor pengguna ada di 'ijin.json'
+    if (ijinData.includes(sender)) {
+      const configuration = new Configuration({
+        apiKey: setting.keyopenai,
+      });
+      const openai = new OpenAIApi(configuration);
+      const response = await openai.createImage({
+        prompt: text,
+        n: 1,
+        size: "512x512",
+      });
+
+      if (response.error && response.error.code === 'content_policy_violation') {
+        return reply('Permintaan Anda ditolak karena isi prompt melanggar ketentuan keamanan.');
+      }
+
+      client.sendImage(from, response.data.data[0].url, text, mek);
+    } else {
+      reply('Maaf, Anda tidak diizinkan menggunakan perintah ini.');
+    }
+  } catch (error) {
+    if (error.response) {
+      console.log(error.response.status);
+      console.log(error.response.data);
+      console.log(`${error.response.status}\n\n${error.response.data}`);
+    } else {
+      console.log(error);
+      m.reply("Maaf, sepertinya ada yang error: " + error.message);
+    }
+  }
+  break;
+
+
+
+  case "ai": case "openai":
+    try {
+      if (setting.keyopenai === "null") return reply("Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys");
+      if (!text) return reply(`Chat dengan AI.\n\nContoh:\n${prefix}${command} Apa itu resesi`);
+      const configuration = new Configuration({
+        apiKey: setting.keyopenai,
+      });
+      const openai = new OpenAIApi(configuration);
+
+      const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: text,
+        temperature: 0, // Higher values means the model will take more risks.
+        max_tokens: 2048, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
+        top_p: 1, // alternative to sampling with temperature, called nucleus sampling
+        frequency_penalty: 0.3, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+        presence_penalty: 0 // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+      });
+
+      if (response.data && response.data.choices && response.data.choices[0] && response.data.choices[0].text) {
+        m.reply(`${response.data.choices[0].text}`);
+      } else {
+        m.reply("Maaf, tidak ada hasil yang ditemukan.");
+      }
+    }
+    catch (error) {
+      if (error.response) {
+        console.log(error.response.status);
+        console.log(error.response.data);
+        console.log(`${error.response.status}\n\n${error.response.data}`);
+      } else {
+        console.log(error);
+        m.reply("Maaf, sepertinya ada yang error :" + error.message);
+      }
+    }
+    break;
+
+
+
+    //pixiv
+
+    if (!args[0]) {
+      reply('Silakan masukkan kata kunci pencarian Pixiv, contoh: /pixiv Hu Tao');
+      return;
+    }
+
+    try {
+      const query = args.join(' ');
+      const apiKey = 'YuuXD'; // Gantilah dengan API Key yang sesuai
+      const response = await axios.get(`https://random.stockakunpolos.repl.co/api/pixiv?query=${query}&apikey=${apiKey}`);
+      const data = response.data;
+
+      if (!data || data.length === 0) {
+        reply('Tidak ada hasil Pixiv yang ditemukan untuk pencarian ini.');
+      } else {
+        const randomId = Math.floor(Math.random() * data.length); // Mengambil ID secara acak
+        const imageUrl = data[randomId].url; // Mengambil URL dari ID yang dipilih
+
+        client.sendImage(from, imageUrl); // Mengirim gambar ke pengguna
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      reply('Maaf, terjadi kesalahan dalam mengambil gambar Pixiv.');
+    }

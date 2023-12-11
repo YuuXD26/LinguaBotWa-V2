@@ -1,2 +1,1 @@
-# LinguaBotWa-V2
-Just Project
+# Lingua-Bot-Fix
